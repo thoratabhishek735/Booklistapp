@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Booklist</title>
+    <style>
+      .labl{
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      body{
+        background: linear-gradient(rgba(64, 247, 8, 0.4),rgba(248, 6, 6, 0.4));
+        background-color: rgb(245, 233, 124);
+      }
+      .red{
+        color: rgb(255, 94, 0);
+      }
+      .aws{
+        font-size: 20px;
+      }
+      .aws:hover{
+        background-color: crimson;
+      }
+      .rem{
+        position: relative;
+    margin-left: 120px;
+    margin-top: -142px;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div class="fixed-top">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class=" h4 red text-center ">Developed By AbhishekThorat</h5>
+          <a href="#"><h6 class="text-white h5">Contact</h6></a>
+          <a href="#"><h6 class="text-white h5">View Website</h6></a>
+          <a href="#" class="fa fa-google m-2 p-2 aws text-white" data-toggle="tooltip" data-placement="right" title="Go to mail"></a>
+    <a href="#" class="fa fa-instagram m-2 p-2 aws text-white" data-toggle="tooltip" data-placement="left" title="Visit Instagram"></a>
+    <a href="#" class="fa fa-linkedin m-2 p-2 aws text-white" data-toggle="tooltip" data-placement="left" title="View Linked in"></a>
+    <a href="#" class="fa fa-github m-2 p-2 aws text-white" data-toggle="tooltip" data-placement="left" title="View github"></a>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark mb-5">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <i class="fa fa-user-circle text-white mr-4" style="font-size:26px" id="usname"> Abhi</i>
+        <h2 class="time text-right text-danger" id="time"> here is time</h2>
+      </nav>
+    </div>
+    
+    <h2 class="time text-right text-danger" id="time"> here is time</h2>>
+    <h1 class="text-center mt-5">Library Management System (Book-List) By Abhishek</h1>
+   
+  <div class="container mt-5">
+    <form id="libraryform">
+      <div class="form-group row">
+        <label for="bookname" class="col-sm-2 col-form-label labl">Name Of book</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control shadow" id="bookname" placeholder="Book Name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="authorname" class="col-sm-2 col-form-label labl">Author</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control shadow" id="authorname" placeholder="Author Name">
+        </div>
+      </div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0 labl">Types</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction" >
+              <label class="form-check-label" for="gridRadios1 ">
+               Fiction
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="biography" value="biography" >
+              <label class="form-check-label" for="gridRadios1">
+                Biography
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking" >
+              <label class="form-check-label" for="gridRadios1">
+                Cooking
+              </label>
+            </div>
+            
+            
+          </div>
+        </div>
+      </fieldset>
+      
+      <div class="form-group row">
+        
+        <div class="col-sm-10 m-4">
+          <button type="submit" class="btn btn-primary shadow">Add Book</button>
+        </div>
+        
+      </div>
+    </form>
+    <div class="col-sm-10 m-2 ">
+      <button class="btn btn-danger rem shadow">Remove Book</button>
+    </div>
+    <div id="message">
+    
+    </div>
+    <div class="catalog mt-5">
+       
+        <h2 class="text-center mt-5">Library Register</h2>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">NAME</th>
+              <th scope="col">AUTHOR</th>
+              <th scope="col">TYPE</th>
+            
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            
+            
+          </tbody>
+        </table>
+        
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2020 AbhishekThorat</p>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="library.js"></script>
+    
+  </body>
+</html>
